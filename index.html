@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Камень, ножницы, бумага</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./main.js"></script>
+</head>
+<body>
+  
+  <section class="game">
+
+    <button type="button" class="game__restart" title="Перезапустить игру?">
+      <i class="icon fa-solid fa-arrow-rotate-left"></i>
+    </button>
+
+    <div class="game__time">
+      <span class="time"></span>
+    </div>
+
+    <!-- Выбор игрока и компьютера (вывод) -->
+    <div class="game__top">
+      <div class="game__user">
+        <i class="icon fa-solid fa-question"></i>
+      </div>
+
+      <div class="game__comp">
+        <i class="icon fa-solid fa-question"></i>
+      </div>
+    </div>
+
+    <!-- Кнопки выбора варианта -->
+    <div class="game__bottom choices">
+      <div class="choices__line">
+        <button type="button" class="choices__elem choice choice_rock" data-value="rock" title="Камень">
+          <i class="icon fa-solid fa-hand-back-fist"></i>
+        </button>
+
+        <button type="button" class="choices__elem choice choice_paper" data-value="paper" title="Ножницы">
+          <i class="icon fa-solid fa-hand"></i>
+        </button>
+
+        <button type="button" class="choices__elem choice choice_scissors" data-value="scissors" title="Бумага">
+          <i class="icon fa-solid fa-hand-scissors"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

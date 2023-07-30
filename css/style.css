@@ -1,0 +1,139 @@
+@import "all.css";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 370px;
+}
+
+:root {
+  --bg-color: #282A2E;
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+/* Icon */
+
+.icon {
+  color: #fff;
+}
+
+/* Game */
+
+.game {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.game.freeze .game__bottom {
+  pointer-events: none;
+}
+
+.game.freeze .time {
+  opacity: .5;
+}
+
+.game__top {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.game__user,
+.game__comp {
+  font-size: 70px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 115px;
+  height: 125px;
+}
+
+.game__restart {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.game__restart .icon {
+  transition: transform ease .5s, opacity ease .2s;
+}
+
+.game__restart:hover .icon {
+  transform: rotate(-360deg);
+  opacity: .7;
+}
+
+.game__restart:active .icon {
+  transform: scale(.8);
+}
+
+/* Time */
+
+.game__time {
+  align-self: center;
+}
+
+.time {
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #fff;
+  cursor: default;
+}
+
+/* Choices */
+
+.choices__line {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+.choices__elem {
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  transition: opacity ease .5s;
+  border: 1px dashed #ccc;
+  padding: .3em;
+}
+
+.choices__elem:hover {
+  opacity: .7;
+  border-style: solid;
+}
+
+.choices__elem:active {
+  transition: opacity ease .1s;
+  opacity: .2;
+}
